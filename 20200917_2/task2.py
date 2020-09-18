@@ -5,4 +5,6 @@ while a>0:
 	if s>21:
 		print(s)
 		break
-	a = input()
+	a = int(input())
+else:
+        print(a)
