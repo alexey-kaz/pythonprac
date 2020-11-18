@@ -1,1 +1,3 @@
--nestr(type(nestr))+nestr(type(nestr))
+-nestr(type(nestr))+(-(-nestr(type(nestr))))*2
+
+

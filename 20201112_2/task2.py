@@ -1,7 +1,10 @@
-class nestr(str):
-	def __neg__(self):
-		return nestr(''.join(reversed(self)))
-	
+from collections import UserString
 
-s = nestr(input())
-print(eval(s))
+
+class nestr(UserString):
+    def __neg__(self):
+        return type(self)(''.join((str(i) for i in reversed(self))))
+
+
+while s := input():
+    print(eval(s))
