@@ -3,5 +3,7 @@
 # Если вхождений меньше двух, не изменять строку
 
 from re import sub
-print(sub(r"((?<=0)(?P<before>[1-9]{2,4})(?=0))(?P<zero>0*)((?<=0)(?P<after>[1-9]{2,4})(?=0))",
-          r"\g<after>\g<zero>\g<before>", input()))
+
+while s := input():
+    print(sub(r"((?<=0)(?P<before>[1-9]{2,4})(?=0))(?P<zero>0*)((?<=0)(?P<after>[1-9]{2,4})(?=0))",
+              r"\g<after>\g<zero>\g<before>", s))

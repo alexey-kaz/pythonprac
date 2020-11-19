@@ -4,4 +4,6 @@
 
 
 from re import sub
-print(str(sub(r'([^aeiouy]*)([aeiouy])([^aeiouy]*)([aeiouy])([^aeiouy]*)', r'\1\4\3\2\5', input())))
+
+while s := input():
+    print(str(sub(r'([^aeiouy]+)([aeiouy])([^aeiouy]+)([aeiouy])(.+)', r'\1\4\3\2\5', s)))
