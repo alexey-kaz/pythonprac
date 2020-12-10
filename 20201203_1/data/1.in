@@ -1,0 +1,15 @@
+from random import randint
+
+
+class C(metaclass=dump):
+    def __init__(self, val):
+        self.val = val
+
+    def sub(self, other, another=None):
+        print('another:', another)
+        return self.val - other - (another or self.val)
+
+
+c = C(12)
+print(c.sub(9))
+print(c.sub(13, another=randint(1, 5)))

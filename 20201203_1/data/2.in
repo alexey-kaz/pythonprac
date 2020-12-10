@@ -1,0 +1,13 @@
+class C(metaclass=dump):
+    def __init__(self, val):
+        self.val = val
+
+    def passer(*args, **kwargs):
+        pass
+
+
+from random import random
+
+c = C(15)
+print(c.passer(c.passer(c.passer(c.passer(random()))) or {'a': 3, 'chk': 11}) or c.passer([1, 2], i=32, j=14))
+print((c.passer(c=321) or c.passer(random())) and c.passer(c.passer(random()) or c.passer(range(2))) * 12)

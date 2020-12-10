@@ -1,0 +1,8 @@
+__init__: (20,), {}
+20
+sub: (9,), {}
+another: None
+-9
+sub: (13,), {'another': 1}
+another: 1
+6

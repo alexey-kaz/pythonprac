@@ -1,0 +1,21 @@
+class E(metaclass=check):
+    A: int
+    B: str = "QQ"
+    C: float = "abc"
+    D = 15
+
+
+e = E()
+print(e.check_annotations())
+e.A = 1
+print(e.check_annotations())
+e.C = 13.1
+print(e.check_annotations())
+e.D = "is it working?"
+print(e.check_annotations())
+e.B = "it works!"
+print(e.check_annotations())
+e.C = 50
+print(e.check_annotations())
+e.D = 14
+print(e.check_annotations())

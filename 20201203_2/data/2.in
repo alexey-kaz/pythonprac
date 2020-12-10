@@ -1,0 +1,22 @@
+class D(metaclass=check):
+    A: dict = {'a': 1}
+    B: tuple = (9, 8, 7)
+    C: set = {'a', 'b', 'c'}
+
+
+d = D()
+print(d.check_annotations())
+d.B = [3, 2, 1]
+print(d.check_annotations())
+d.B = ()
+print(d.check_annotations())
+d.A = {}
+print(d.check_annotations())
+d.A = {'x', 'y', 'z'}
+print(d.check_annotations())
+d.A = {'c': 1, 'd': 2}
+print(d.check_annotations())
+d.C = {}
+print(d.check_annotations())
+d.C = set()
+print(d.check_annotations())
