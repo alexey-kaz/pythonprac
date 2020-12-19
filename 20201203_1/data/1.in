@@ -1,6 +1,3 @@
-from random import randint
-
-
 class C(metaclass=dump):
     def __init__(self, val):
         self.val = val
@@ -12,4 +9,4 @@ class C(metaclass=dump):
 
 c = C(12)
 print(c.sub(9))
-print(c.sub(13, another=randint(1, 5)))
+print(c.sub(13, another=5))

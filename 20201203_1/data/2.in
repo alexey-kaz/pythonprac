@@ -6,8 +6,6 @@ class C(metaclass=dump):
         pass
 
 
-from random import random
-
 c = C(15)
-print(c.passer(c.passer(c.passer(c.passer(random()))) or {'a': 3, 'chk': 11}) or c.passer([1, 2], i=32, j=14))
-print((c.passer(c=321) or c.passer(random())) and c.passer(c.passer(random()) or c.passer(range(2))) * 12)
+print(c.passer(c.passer(c.passer(c.passer(0.21))) or {'a': 3, 'chk': 11}) or c.passer([1, 2], i=32, j=14))
+print((c.passer(c=321) or c.passer(0.334)) and c.passer(c.passer(0.123) or c.passer(range(2))) * 12)
