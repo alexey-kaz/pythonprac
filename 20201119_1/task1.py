@@ -3,14 +3,14 @@
 import sys
 
 
-def counter(fun):
+def deccount(fun):
     count = 0
 
     def wrap(*args, **dict_args):
         nonlocal count
         count += 1
         res = fun(*args, **dict_args)
-        print('Function call count:', count)
+        print(count)
         return res
 
     count = 0

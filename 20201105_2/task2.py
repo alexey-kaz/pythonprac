@@ -5,5 +5,4 @@
 
 from re import sub
 
-while s := input():
-    print(str(sub(r'([^aeiouy]+)([aeiouy])([^aeiouy]+)([aeiouy])(.+)', r'\1\4\3\2\5', s)))
+print(str(sub(r'([aeiouy])([^aeiouy]+)([aeiouy])', r'\3\2\1', input())))

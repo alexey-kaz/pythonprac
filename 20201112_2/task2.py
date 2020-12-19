@@ -6,5 +6,4 @@ class nestr(UserString):
         return type(self)(''.join((str(i) for i in reversed(self))))
 
 
-while s := input():
-    print(eval(s))
+print(eval(input()))

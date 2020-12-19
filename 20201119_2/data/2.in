@@ -1,0 +1,16 @@
+class C:
+        num = Num()
+
+class D:
+       bam = Num()
+
+a, b = C(), D();
+print(a.num + b.bam);
+a.num = 5;
+print(a.num + b.bam);
+b.bam = 10;
+print(a.num + b.bam);
+a.num = "23423423dsfww"
+print(a.num + b.bam);
+b.bam = a.num = "Testing!"
+print(b.bam, " and ", a.num);

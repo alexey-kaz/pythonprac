@@ -1,0 +1,11 @@
+@deccount
+def fun1(*whatever):
+    return 0
+
+@deccount
+def fun2(*whatever):
+    return len(whatever)
+
+t = fun1(1,2,3) + fun1(2,3,4) + fun1(3,4,5) + fun1(1,2,3)
+k = fun2(2,3,4,5,4,3)
+print(fun2(fun1(fun1(fun2((fun1(fun2(fun2(fun1())))))))));
