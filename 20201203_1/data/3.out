@@ -1,0 +1,7 @@
+__init__: (10,), {}
+dadd: (), {'other': 'abc'}
+Hello abc
+Hello abc
+
+add: (), {'other': 3, 'another': 4}
+37
