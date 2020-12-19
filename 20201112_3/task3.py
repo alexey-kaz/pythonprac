@@ -1,17 +1,27 @@
 import re
 
-expr = r'(?P<a>\(\d+,\d+\)), *(?P<b>\(\d+,\d+\)), *(?P<c>\(\d+,\d+\))'
+expr = r'(?P<x>\(\d+, *\d+\)), *(?P<y>\(\d+, *\d+\)), *(?P<z>\(\d+, *\d+\))'
 while True:
-    s = input()
-    if re.search(expr, s):
-        a = eval(re.fullmatch(expr, s).group('a'))
-        b = eval(re.fullmatch(expr, s).group('b'))
-        c = eval(re.fullmatch(expr, s).group('c'))
-        A = abs(a[0] * (b[1] - c[1]) + b[0] * (c[1] - a[1]) + c[0] * (a[1] - b[1])) / 2.0
+    try:
+        s = input()
+        if re.search(expr, s):
+            x = eval(re.fullmatch(expr, s).group('x'))
+            y = eval(re.fullmatch(expr, s).group('y'))
+            z = eval(re.fullmatch(expr, s).group('z'))
+        else:
+            print('Invalid input')
+            continue
+        a = ((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2) ** 0.5
+        b = ((x[0] - z[0]) ** 2 + (x[1] - z[1]) ** 2) ** 0.5
+        c = ((z[0] - y[0]) ** 2 + (z[1] - y[1]) ** 2) ** 0.5
+        p = (a + b + c) / 2
+        A = (p * (p - a) * (p - b) * (p - c)) ** 0.5
         if A:
             print('{:.2f}'.format(A))
             break
         else:
             print('Not a triangle')
-    else:
-        print('Invalid input')
+            continue
+    except EOFError:
+        break
+

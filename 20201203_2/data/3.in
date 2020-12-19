@@ -1,0 +1,10 @@
+class C(metaclass=check):
+    A: str = "a"
+    B: int = 2
+
+q = C()
+print(q.check_annotations())
+q.A = "abc"
+print(q.check_annotations())
+q.B = 2
+print(q.check_annotations())

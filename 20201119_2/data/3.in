@@ -1,0 +1,7 @@
+class C:
+    num = Num()
+A = C()
+B = C()
+A.num = "abcd" + "123"
+B.num = range(1024)
+print(A.num * 3, 2 * B.num)

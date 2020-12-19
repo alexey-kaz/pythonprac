@@ -1,8 +1,7 @@
-__init__: (20,), {}
-20
+__init__: (12,), {}
 sub: (9,), {}
 another: None
 -9
-sub: (13,), {'another': 1}
-another: 1
-6
+sub: (13,), {'another': 5}
+another: 5
+-6

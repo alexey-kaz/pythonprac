@@ -6,11 +6,11 @@ class D:
 
 a, b = C(), D();
 print(a.num + b.bam);
-a.num = 5;
+a.num = 3;
 print(a.num + b.bam);
-b.bam = 10;
+b.bam = 5;
+b.bam = a.num = "Test"
+print(b.bam, " and ", a.num);
 print(a.num + b.bam);
 a.num = "23423423dsfww"
-print(a.num + b.bam);
-b.bam = a.num = "Testing!"
-print(b.bam, " and ", a.num);
+print(a.num - b.bam);
