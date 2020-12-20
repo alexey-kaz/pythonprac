@@ -1,6 +1,6 @@
 import re
 
-expr = r'(?P<x>\(\d+, *\d+\)), *(?P<y>\(\d+, *\d+\)), *(?P<z>\(\d+, *\d+\))'
+expr = r'(?P<x>\(-?\d+, *-?\d+\)), *(?P<y>\(-?\d+, *-?\d+\)), *(?P<z>\(-?\d+, *-?\d+\))'
 while True:
     try:
         s = input()
