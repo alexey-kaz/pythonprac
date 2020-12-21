@@ -1,10 +1,10 @@
 __init__: (15,), {}
-passer: (0.2060090230053706,), {}
+passer: (0.21,), {}
 passer: (None,), {}
 passer: (None,), {}
 passer: ({'a': 3, 'chk': 11},), {}
 passer: ([1, 2],), {'i': 32, 'j': 14}
 None
 passer: (), {'c': 321}
-passer: (0.35198791927396245,), {}
+passer: (0.334,), {}
 None
