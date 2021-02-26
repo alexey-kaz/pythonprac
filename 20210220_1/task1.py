@@ -1,3 +1,4 @@
+import time
 import tkinter as tk
 
 
@@ -7,8 +8,11 @@ class Application(tk.Frame):
         self.grid()
         self.createWidgets()
 
+    def showtime(self):
+        self.timeLabel['text'] = time.ctime(time.time())
+
     def createWidgets(self):
-        self.timeButton = tk.Button(self, text='Time')
+        self.timeButton = tk.Button(self, text='Time', command=self.showtime)
         self.quitButton = tk.Button(self, text='Quit', command=self.quit)
         self.timeLabel = tk.Label(self)
         self.timeButton.grid()
