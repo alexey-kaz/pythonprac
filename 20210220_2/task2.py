@@ -10,11 +10,16 @@ class Application(tk.Frame):
     def showdir(self):
         self.bttn.set(run("dir", capture_output=True, shell=True).stdout)
 
+    def showdate(self):
+        self.bttn.set(run("date", capture_output=True, shell=True).stdout)
+
     def createWidgets(self):
         self.bttn = tk.StringVar()
         self.dirButton = tk.Button(self, text='dir', command=self.showdir)
+        self.dateButton = tk.Button(self, text='date', command=self.showdate)
         self.textLabel = tk.Label(self, textvariable=self.bttn)
         self.dirButton.grid(row=0, column=1)
+        self.dateButton.grid(row=0, column=2)
         self.textLabel.grid(columnspan=4)
 
 
