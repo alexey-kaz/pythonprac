@@ -9,6 +9,12 @@ class Application(tk.Frame):
 
     def createWidgets(self):
         """
+        StringVars:
+        -------
+        ItemVar
+        """
+        self.itemVar = tk.StringVar()
+        """
         Buttons:
         -------
         exit - closes window
@@ -18,13 +24,13 @@ class Application(tk.Frame):
         self.exitButton.grid(row=0, column=1)
         self.nextButton = tk.Button(self, text='Next item')
         self.nextButton.grid(row=2, column=1)
-        """ 
-        Labels: 
-        _______
-        <MenuItem>
-        """
+        """ Label <MenuItem> """
         self.textLabel = tk.Label(self, text='<MenuItem>')
         self.textLabel.grid(row=1, column=1)
+        """ Option menu consisting of items One, Two, Three """
+        options = ('One', 'Two', 'Three')
+        self.optionMenu = tk.OptionMenu(self, self.itemVar, *options)
+        self.optionMenu.grid(row=3, column=1)
 
 
 app = Application()
