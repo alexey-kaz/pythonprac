@@ -25,7 +25,7 @@ class Application(tk.Frame):
         self.nextButton = tk.Button(self, text='Next item')
         self.nextButton.grid(row=2, column=1)
         """ Label <MenuItem> """
-        self.textLabel = tk.Label(self, text='<MenuItem>')
+        self.textLabel = tk.Label(self, text='<MenuItem>', textvariable=self.itemVar)
         self.textLabel.grid(row=1, column=1)
         """ Option menu consisting of items One, Two, Three, Four """
         options = ('One', 'Two', 'Three', 'Four')
