@@ -17,10 +17,10 @@ class Application(tk.Frame):
         """
         Buttons:
         -------
-        exit - closes window
+        exit - closes window (complete)
         next item
         """
-        self.exitButton = tk.Button(self, text='Exit')
+        self.exitButton = tk.Button(self, text='Exit', command=self.quit)
         self.exitButton.grid(row=0, column=1)
         self.nextButton = tk.Button(self, text='Next item')
         self.nextButton.grid(row=2, column=1)
