@@ -27,8 +27,8 @@ class Application(tk.Frame):
         """ Label <MenuItem> """
         self.textLabel = tk.Label(self, text='<MenuItem>')
         self.textLabel.grid(row=1, column=1)
-        """ Option menu consisting of items One, Two, Three """
-        options = ('One', 'Two', 'Three')
+        """ Option menu consisting of items One, Two, Three, Four """
+        options = ('One', 'Two', 'Three', 'Four')
         self.optionMenu = tk.OptionMenu(self, self.itemVar, *options)
         self.optionMenu.grid(row=3, column=1)
 
