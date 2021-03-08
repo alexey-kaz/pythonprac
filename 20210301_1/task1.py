@@ -7,6 +7,10 @@ class Application(tk.Frame):
         self.grid()
         self.createWidgets()
 
+    def nextItem(self):
+        index = self.options.index(self.itemVar.get()) if self.itemVar.get() in self.options else -1
+        self.itemVar.set(self.options[(index+1) % len(self.options)])
+
     def createWidgets(self):
         """
         StringVars:
@@ -22,14 +26,14 @@ class Application(tk.Frame):
         """
         self.exitButton = tk.Button(self, text='Exit')
         self.exitButton.grid(row=0, column=1)
-        self.nextButton = tk.Button(self, text='Next item')
+        self.nextButton = tk.Button(self, text='Next item', command=self.nextItem)
         self.nextButton.grid(row=2, column=1)
         """ Label <MenuItem> """
         self.textLabel = tk.Label(self, text='<MenuItem>')
         self.textLabel.grid(row=1, column=1)
         """ Option menu consisting of items One, Two, Three """
-        options = ('One', 'Two', 'Three')
-        self.optionMenu = tk.OptionMenu(self, self.itemVar, *options)
+        self.options = ('One', 'Two', 'Three')
+        self.optionMenu = tk.OptionMenu(self, self.itemVar, *self.options)
         self.optionMenu.grid(row=3, column=1)
 
 
