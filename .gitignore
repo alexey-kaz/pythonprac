@@ -152,5 +152,6 @@ fabric.properties
 
 .DS_Store
 checkerNN.py
+tkinter_base.py
 /script.sh
 /data_script.sh
