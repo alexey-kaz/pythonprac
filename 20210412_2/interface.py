@@ -1,6 +1,5 @@
 """interface.py."""
 import tkinter as tk
-
 import logic
 
 
