@@ -1,12 +1,22 @@
+import gettext
+import os
+
 import pyfiglet
-def solve(a,b):
-    f = pyfiglet.Figlet()
+
+gettext.install("fig", os.path.dirname(__file__), names=("ngettext",))
+
+
+def solve(a, b):
     if a == 0:
         return None
-    return -b/a
+    return -b / a
+
 
 def fig(res):
-    f = pyfiglet.Figlet()
     if res is None:
-        return f.renderText('NO ROOTS')
-    return f.renderText('Root: {}'.format(res))
+        root = _('NO ROOTS')
+    else:
+        root = _('Root: ')
+        root += str(res)
+    f = pyfiglet.Figlet(font="banner")
+    return f.renderText(root)

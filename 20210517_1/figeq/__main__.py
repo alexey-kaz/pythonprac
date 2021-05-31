@@ -1,4 +1,9 @@
+import gettext
+import os
+
 from . import solve, fig
 
-a,b = map(float, input("input a, b: ").split())
+gettext.install("fig", os.path.dirname(__file__), names=("ngettext",))
+
+a, b = map(float, input(_("input a, b: ")).split())
 print(fig(solve(a, b)))

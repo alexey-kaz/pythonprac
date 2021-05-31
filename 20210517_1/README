@@ -1,0 +1,8 @@
+Перед запуском требуется использовать 'pip install .'
+
+doit update – Update translation
+doit compile – Compile translation
+doit test – Run unittest
+doit wheel – Wheel distribution
+doit src – Source distribution
+doit clear – Clear junk
